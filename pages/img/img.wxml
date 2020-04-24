@@ -1,0 +1,42 @@
+<!--pages/img/img.wxml-->
+<!-- 1.text类似span
+     2.view 类似div -->
+<!-- <text>pages/img/img.wxml</text> -->
+
+<!-- 字符串 -->
+<view>{{msg}}</view>
+<!-- 数字 -->
+<view>{{num}}</view>
+<!-- 布尔类型 -->
+<view><text>是否伪娘:</text>{{isGirl}}</view>
+<!-- 对象 -->
+<view>{{person.age}}</view>
+<view>{{person.height}}</view>
+<view>{{person.weight}}</view>
+<view>{{person.name}}</view>
+
+<view data-num="{{num}}">自定义属性</view>
+
+<view>
+<checkbox checked="{{isChecked}}"></checkbox>
+</view>
+<view>{{1+1}}</view>
+<view>{{11%2==0?"偶数":"基数"}}</view>
+<view>  ·
+<!-- 遍历数组 -->
+<view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+索引：{{index}}
+值：{{item.name}}
+</view>
+<view wx:for="{{list}}" wx:key="id">
+索引：{{index}}
+值：{{item.name}}
+</view>
+</view>
+<view>
+<view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="name">
+属性：{{key}}
+--
+值：{{value}}
+</view>
+</view>
